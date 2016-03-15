@@ -1,0 +1,24 @@
+{
+  "name": "react-simpleform",
+  "version": "1.0.0",
+  "description": "Simple form using React",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/111StudioKK/react-simpleform.git"
+  },
+  "keywords": [
+    "form",
+    "react",
+    "simple"
+  ],
+  "author": "Hugues Alexandre <hugues@111studio.jp>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/111StudioKK/react-simpleform/issues"
+  },
+  "homepage": "https://github.com/111StudioKK/react-simpleform#readme"
+}
