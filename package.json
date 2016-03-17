@@ -2,7 +2,7 @@
   "name": "react-simpleform",
   "version": "1.0.0",
   "description": "Small form for React",
-  "main": "lib/library.js",
+  "main": "lib/react-simpleform.js",
   "scripts": {
     "build": "webpack --mode=build",
     "dev": "webpack --progress --colors --watch --mode=dev",
@@ -15,10 +15,14 @@
     "babel-loader": "6.1.0",
     "babel-plugin-add-module-exports": "0.1.2",
     "babel-preset-es2015": "6.3.13",
+    "babel-preset-stage-0": "6.5.0",
+    "babel-preset-react": "6.5.0",
+    "eslint-plugin-react": "4.2.3",
     "chai": "3.4.1",
     "eslint": "1.7.2",
     "eslint-loader": "1.1.0",
     "mocha": "2.3.4",
+    "react-hot-loader": "1.3.0",
     "webpack": "1.12.9",
     "yargs": "3.32.0"
   },
@@ -37,5 +41,16 @@
   "bugs": {
     "url": "https://github.com/111Studio/react-simpleform/issues"
   },
-  "homepage": "https://github.com/111Studio/react-simpleform"
+  "homepage": "https://github.com/111Studio/react-simpleform",
+  "dependencies": {
+    "moment": "2.12.0",
+    "react": "0.14.7",
+    "react-click-outside": "2.1.0",
+    "react-day-picker": "1.3.1",
+    "react-dom": "0.14.7",
+    "react-icheck": "0.2.2",
+    "react-json-tree": "0.6.0",
+    "react-select": "1.0.0-beta11",
+    "react-tagsinput": "3.4.1"
+  }
 }

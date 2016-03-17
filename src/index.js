@@ -1,8 +1,5 @@
-export default class Library {
-  constructor() {
-    this._name = 'Library';
-  }
-  get name() {
-    return this._name;
-  }
-}
+import {Form, Field, Calendar, Textarea, Input, Select, Checkbox, Radio, Tags, Boolean} from './main/Form.js';
+
+export default Form;
+export {Form, Field, Calendar, Textarea, Input, Select, Checkbox, Radio, Tags, Boolean};
+
