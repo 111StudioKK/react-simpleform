@@ -90,4 +90,4 @@ class _Calendar extends Field {
   }
 }
 
-export const Calendar = enhanceWithClickOutside(_Calendar);
+export default const Calendar = enhanceWithClickOutside(_Calendar);

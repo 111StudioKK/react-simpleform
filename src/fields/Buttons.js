@@ -1,7 +1,7 @@
 import React from 'react';
 import Field from '../main/Field.js';
 
-export class Buttons extends Field {
+export default class Buttons extends Field {
   _onClick(evt) {
     this.onChange(evt.currentTarget.value);
   }

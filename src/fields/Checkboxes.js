@@ -2,7 +2,7 @@ import React from 'react';
 import Field from '../main/Field.js';
 import {Checkbox} from 'react-icheck';
 
-export class Checkboxes extends Field {
+export default class Checkboxes extends Field {
 
   constructor(props) {
     super(props);

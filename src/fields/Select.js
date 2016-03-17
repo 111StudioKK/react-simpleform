@@ -2,7 +2,7 @@ import React from 'react';
 import Field from '../main/Field.js';
 import _Select from 'react-select';
 
-export class Select extends Field {
+export default class Select extends Field {
 
   constructor(props) {
     super(props);

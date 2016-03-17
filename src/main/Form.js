@@ -1,7 +1,7 @@
 import React from 'react';
 import JSONTree from 'react-json-tree';
 
-export class Form extends React.Component {
+export default class Form extends React.Component {
 
   constructor(props) {
     super(props);

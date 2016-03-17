@@ -2,7 +2,7 @@ import React from 'react';
 import Field from '../main/Field.js';
 import TagsInput from 'react-tagsinput';
 
-export class Tags extends Field {
+export default class Tags extends Field {
 
   constructor(props) {
     super(props);

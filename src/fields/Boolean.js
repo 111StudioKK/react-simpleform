@@ -2,7 +2,7 @@ import React from 'react';
 import Field from '../main/Field.js';
 import {Radio} from 'react-icheck';
 
-export class Boolean extends Field {
+export default class Boolean extends Field {
   componentDidMount(){
     this.onChange(this.props.value || false);
   }

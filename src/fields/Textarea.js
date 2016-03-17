@@ -1,7 +1,7 @@
 import React from 'react';
 import Field from '../main/Field.js';
 
-export class Textarea extends Field {
+export default class Textarea extends Field {
   renderField(other) {
     return (
       <textarea
