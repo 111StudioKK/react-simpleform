@@ -1,6 +1,9 @@
 # React Simple Form
 
-To install : npm i -S 111-react-simpleform
+To install
+```
+npm i -S 111-react-simpleform
+```
 
 Declaration example in React :
 
