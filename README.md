@@ -1,4 +1,12 @@
-# 111s Form
+# React Simple Form
+
+To install : npm i -S 111-react-simpleform
+
+Declaration example in React :
+
+```javascript 
+import Form, {Input, Textarea} from '111-react-simpleform';
+````
 
 TODO
 
