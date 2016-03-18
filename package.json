@@ -1,6 +1,6 @@
 {
   "name": "111-react-simpleform",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Small form for React",
   "main": "lib/react-simpleform.min.js",
   "scripts": {
@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/111Studio/react-simpleform.git"
+    "url": "https://github.com/111StudioKK/react-simpleform.git"
   },
   "keywords": [
     "react",
@@ -44,9 +44,9 @@
   "author": "Hugues Alexandre",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/111Studio/react-simpleform/issues"
+    "url": "https://github.com/111StudioKK/react-simpleform/issues"
   },
-  "homepage": "https://github.com/111Studio/react-simpleform",
+  "homepage": "https://github.com/111StudioKK/react-simpleform",
   "dependencies": {
     "moment": "2.12.0",
     "react": "0.14.7",
