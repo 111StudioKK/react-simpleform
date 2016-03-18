@@ -1,5 +1,6 @@
 import React from 'react';
 import JSONTree from 'react-json-tree';
+import '../style/Form.less';
 
 export default class Form extends React.Component {
 

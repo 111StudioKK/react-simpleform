@@ -27,6 +27,11 @@ var config = {
   module: {
     loaders: [
       {
+        test: /\.less$/,
+        loader: 'style!css!less',
+        include: path.join(__dirname, 'src')
+      },
+      {
         test: /(\.jsx|\.js)$/,
         loader: 'babel',
         exclude: /(node_modules|bower_components)/

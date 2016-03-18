@@ -4,6 +4,7 @@ import moment from 'moment';
 import MomentLocaleUtils from 'react-day-picker/moment';
 import DayPicker, { DateUtils } from 'react-day-picker';
 import enhanceWithClickOutside from 'react-click-outside';
+import '../style/Calendar.less';
 
 class _Calendar extends Field {
 
@@ -90,4 +91,4 @@ class _Calendar extends Field {
   }
 }
 
-export default const Calendar = enhanceWithClickOutside(_Calendar);
+export default enhanceWithClickOutside(_Calendar);
