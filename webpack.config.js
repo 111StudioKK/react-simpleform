@@ -16,13 +16,17 @@ if (env === 'build') {
 
 var config = {
   entry: __dirname + '/src/index.js',
-  devtool: 'source-map',
   output: {
     path: __dirname + '/lib',
     filename: outputFile,
     library: libraryName,
     libraryTarget: 'umd',
     umdNamedDefine: true
+  },
+  externals: {
+      // Use external version of React
+      "react": "React",
+      "react-dom": "ReactDOM"
   },
   module: {
     loaders: [
