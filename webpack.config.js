@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 
 var reactExternals = {
   root: 'React',
@@ -14,16 +15,10 @@ var reactDOMExternals = {
 };
 
 var libraryName = 'react-simpleform';
+var outputFile = libraryName + '.min.js';
+
 var plugins = [], outputFile;
-
-if (env === 'build') {
-  outputFile = libraryName + '.min.js';
-} else {
-  outputFile = libraryName + '.js';
-}
-
 plugins.push(new webpack.optimize.OccurenceOrderPlugin(true));
-
 plugins.push(new webpack.IgnorePlugin(/^\.\/locale$/,/node_modules\/react$/));
 
 var config = {
@@ -32,8 +27,7 @@ var config = {
     path: path.join(__dirname, 'dist'),
     filename: outputFile,
     library: libraryName,
-    libraryTarget: 'umd',
-    umdNamedDefine: true
+    libraryTarget: 'umd'
   },
   externals: [
     {
@@ -52,7 +46,7 @@ var config = {
       {
         test: /(\.jsx|\.js)$/,
         loader: 'babel',
-        exclude: /(node_modules|bower_components)/
+        exclude: /node_modules/
       },
       {
         test: /(\.jsx|\.js)$/,
