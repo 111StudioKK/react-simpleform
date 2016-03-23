@@ -2,7 +2,7 @@
   "name": "111-react-simpleform",
   "version": "1.0.5",
   "description": "Small form for React",
-  "main": "dist/react-simpleform.js",
+  "main": "dist/react-simpleform.min.js",
   "scripts": {
     "build": "webpack -p --mode=build",
     "dev": "webpack --progress --colors --watch --mode=dev",

@@ -33,7 +33,11 @@ TODO
 
 ## Updates
 
-1.0.5 - Current
+
+1.0.6 - Current
+* Correct dist name bug
+
+1.0.5
 * Correct npmignore problem
 
 1.0.4
