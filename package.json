@@ -1,6 +1,6 @@
 {
   "name": "111-react-simpleform",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Small form for React",
   "main": "dist/react-simpleform.js",
   "scripts": {
