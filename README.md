@@ -33,7 +33,10 @@ TODO
 
 ## Updates
 
-1.0.4 - WIP
+1.0.5 - WIP
+* Move moment to peerPackages or remove from packages
+
+1.0.4 - Current
 * Purge unecessary packages
 * Purge fake tests
 * Tweek webpack and change directory from lib to dist and remove maping
