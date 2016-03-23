@@ -3,16 +3,32 @@ var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var path = require('path');
 var env = require('yargs').argv.mode;
 
+var reactExternals = {
+  root: 'React',
+  commonjs2: 'react',
+  commonjs: 'react',
+  amd: 'react'
+};
+var reactDOMExternals = {
+  root: 'ReactDOM',
+  commonjs2: 'react-dom',
+  commonjs: 'react-dom',
+  amd: 'react-dom'
+};
+
 var libraryName = 'react-simpleform';
 
 var plugins = [], outputFile;
 
 if (env === 'build') {
-  plugins.push(new UglifyJsPlugin({ minimize: true }));
   outputFile = libraryName + '.min.js';
 } else {
   outputFile = libraryName + '.js';
 }
+
+plugins.push(new webpack.optimize.OccurenceOrderPlugin(true));
+
+plugins.push(new webpack.IgnorePlugin(/^\.\/locale$/,/node_modules\/react$/));
 
 var config = {
   entry: __dirname + '/src/index.js',
@@ -23,11 +39,13 @@ var config = {
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
-  externals: {
-      // Use external version of React
-      "react": "React",
-      "react-dom": "ReactDOM"
-  },
+  externals: [
+    {
+      'react': reactExternals,
+      './React': reactExternals,
+      'react-dom': reactDOMExternals
+    }
+  ],
   module: {
     loaders: [
       {
@@ -42,14 +60,10 @@ var config = {
       },
       {
         test: /(\.jsx|\.js)$/,
-        loader: "eslint-loader",
+        loader: 'eslint-loader',
         exclude: /node_modules/
       }
     ]
-  },
-  resolve: {
-    root: path.resolve('./src'),
-    extensions: ['', '.js']
   },
   plugins: plugins
 };
