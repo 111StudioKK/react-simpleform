@@ -1,7 +1,30 @@
 var path = require('path');
 
+var reactExternals = {
+  root: 'React',
+  commonjs2: 'react',
+  commonjs: 'react',
+  amd: 'react'
+};
+var reactDOMExternals = {
+  root: 'ReactDOM',
+  commonjs2: 'react-dom',
+  commonjs: 'react-dom',
+  amd: 'react-dom'
+};
+
 var libraryName = 'react-simpleform';
-var outputFile = libraryName + '.js';
+var plugins = [], outputFile;
+
+if (env === 'build') {
+  outputFile = libraryName + '.min.js';
+} else {
+  outputFile = libraryName + '.js';
+}
+
+plugins.push(new webpack.optimize.OccurenceOrderPlugin(true));
+
+plugins.push(new webpack.IgnorePlugin(/^\.\/locale$/,/node_modules\/react$/));
 
 var config = {
   entry: __dirname + '/src/index.js',
@@ -12,6 +35,13 @@ var config = {
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
+  externals: [
+    {
+      'react': reactExternals,
+      './React': reactExternals,
+      'react-dom': reactDOMExternals
+    }
+  ],
   module: {
     loaders: [
       {
@@ -26,15 +56,12 @@ var config = {
       },
       {
         test: /(\.jsx|\.js)$/,
-        loader: "eslint-loader",
+        loader: 'eslint-loader',
         exclude: /node_modules/
       }
     ]
   },
-  resolve: {
-    root: path.resolve('./src'),
-    extensions: ['', '.js']
-  }
+  plugins: plugins
 };
 
 module.exports = config;
