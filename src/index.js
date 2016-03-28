@@ -8,6 +8,7 @@ import Input from './fields/Input.js';
 import Select from './fields/Select.js';
 import Tags from './fields/Tags.js';
 import Textarea from './fields/Textarea.js';
+import Yup from 'yup';
 
 export default Form;
 export {
@@ -19,5 +20,6 @@ export {
   Input,
   Select,
   Tags,
-  Textarea
+  Textarea,
+  Yup
 };
