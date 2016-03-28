@@ -34,7 +34,10 @@ TODO
 ## Updates
 
 
-1.0.6 - Current
+1.1.0 - Current
+* Add Yup as hard dep
+
+1.0.6
 * Correct dist name bug
 
 1.0.5
