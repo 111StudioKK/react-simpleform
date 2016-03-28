@@ -54,6 +54,7 @@
     "react-icheck": "0.2.2",
     "react-json-tree": "0.6.0",
     "react-select": "1.0.0-beta11",
-    "react-tagsinput": "3.4.1"
+    "react-tagsinput": "3.4.1",
+    "yup": "git+https://github.com/111StudioKK/yup.git"
   }
 }
