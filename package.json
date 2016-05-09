@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack -p --mode=build",
     "dev": "webpack --progress --colors --watch --mode=dev",
+    "example": "webpack-dev-server --content-base example/build/ --config webpack-example.config.js",
     "test": "echo 'ERROR : no tests yet'"
   },
   "devDependencies": {
