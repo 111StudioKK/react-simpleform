@@ -1,6 +1,5 @@
 import React from 'react';
 import Field from '../main/Field.js';
-import {Checkbox} from 'react-icheck';
 
 export default class Checkboxes extends Field {
 
@@ -32,13 +31,14 @@ export default class Checkboxes extends Field {
     return (
       <div className='checkboxes'>
         {this.props.values.map( (checkbox) => {
-          return <Checkbox
-            label={checkbox.label}
-            checkboxClass={this.props.checkboxClass}
+          return <div key={checkbox.value}>
+            <input
+            type="checkbox"
+            className={this.props.checkboxClass}
             onChange={this._onChange.bind(this, checkbox.value)}
             checked={(this.state.value.indexOf(checkbox.value) !== -1)}
-            key={checkbox.value}
-          />;
+            value={checkbox.value}
+          ></input><span className="checkbox-label">{checkbox.label}</span></div>;
         })}
       </div>
     );
