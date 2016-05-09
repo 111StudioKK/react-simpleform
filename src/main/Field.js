@@ -53,9 +53,9 @@ export default class Field extends React.Component {
   }
 
   render() {
-    let formGroupClass = 'form-group';
+    let {label, hint, required, className, ...other} = this.props;
 
-    let {label, hint, required, ...other} = this.props;
+    let formGroupClass = 'form-group' + (className ? ' ' + className : '');
 
     if(this.state.focused){
       formGroupClass += ' active';
