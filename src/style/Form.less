@@ -28,7 +28,7 @@
     font-weight: normal;
   }
 
-  select, input:not([type='checkbox']), textarea, .react-tagsinput {
+  select, input:not([type='checkbox']):not([type='radio']), textarea, .react-tagsinput {
     border: 1px solid #CCCCCC;
     font-size: unit(@input-font-size, px);
     padding: 6px 10px;
@@ -518,7 +518,6 @@
   border-top: none;
   z-index: 10;
   position: absolute;
-  width: 100%;
 }
 
 .input-width {

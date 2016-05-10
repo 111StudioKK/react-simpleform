@@ -1,6 +1,5 @@
 import React from 'react';
 import Field from '../main/Field.js';
-import {Radio} from 'react-icheck';
 
 export default class Boolean extends Field {
   componentDidMount(){
@@ -14,20 +13,22 @@ export default class Boolean extends Field {
   renderField() {
     return (
       <div className="radios">
-        <Radio
+        <input
+          name={this.props.name}
+          type="radio"
           checked={this.state.value === false}
           value={false}
-          radioClass={this.props.radioClass}
-          label={this.props.labelFalse}
+          className={this.props.radioClass}
           onChange={this._onChange.bind(this)}
-        />
-        <Radio
+        /> {this.props.labelFalse}
+        <input
+          name={this.props.name}
+          type="radio"
           checked={this.state.value === true}
           value={true}
-          radioClass={this.props.radioClass}
-          label={this.props.labelTrue}
+          className={this.props.radioClass}
           onChange={this._onChange.bind(this)}
-        />
+        /> {this.props.labelTrue}
       </div>
     );
   }

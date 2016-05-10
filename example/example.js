@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Form, { Input, Checkboxes, Calendar, Buttons, Yup } from '../src/index.js';
+import Form, { Boolean, Buttons, Calendar, Checkboxes, Input, Yup } from '../src/index.js';
 
 //var App = React.createClass({
 class App extends React.Component {
@@ -10,7 +10,8 @@ class App extends React.Component {
     this.state = {
       schema: Yup.object().shape({
         name: Yup.string().required(),
-        niveau: Yup.string().required()/*,
+        niveau: Yup.string().required(),
+        noob: Yup.boolean().required()/*,
         rank: Yup.array().min(1).required(),
         when: Yup.number(),
         valid: Yup.string().required()*/
@@ -34,6 +35,7 @@ class App extends React.Component {
             name="rank"
             checkboxClass="checkbox"
             values={['bronze', 'silver', 'gold', 'platinium', 'diamond'].map( (i) => { return {label: i.toUpperCase(), value:i};})} />
+          <Boolean name="noob" labelTrue="Yes very noob" labelFalse="Yes, a bit noob" />
           <Calendar name="when" label="When" className="date" />
           <Buttons values={[
             {value:'ok', class:'btn-approve', label:<div>OK</div>},
