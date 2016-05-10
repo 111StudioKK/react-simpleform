@@ -34,6 +34,12 @@ TODO
 ## Updates
 
 
+1.2.0 - Current
+* Add React 15 as devDep and compatibility with it
+* Add examples to test the components
+* Add className dispatch on components
+* Correct minor bugs
+
 1.1.0 - Current
 * Add Yup as hard dep
 
