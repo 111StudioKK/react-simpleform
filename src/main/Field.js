@@ -6,6 +6,7 @@ export default class Field extends React.Component {
     super(props);
     this.state = {
       focused: false,
+      value: '',
       pristine: true
     };
   }
