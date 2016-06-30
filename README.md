@@ -34,7 +34,11 @@ TODO
 ## Updates
 
 
-1.2.1 - Current
+1.2.2 - Current
+* Correct CSS on component Select
+* Correct different bugs on Select
+
+1.2.1
 * Correct a bug on the component Select
 
 1.2.0
