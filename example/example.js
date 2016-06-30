@@ -39,7 +39,6 @@ class App extends React.Component {
           <Select 
             className="rank"
             name="rank"
-            multi={ false }
             options={ [
               { label: 'Bronze', value: 'b' },
               { label: 'Silver', value: 's' },
@@ -49,7 +48,6 @@ class App extends React.Component {
               { label: 'Master', value: 'm' },
               { label: 'Chalenger', value: 'c' }
             ]}
-            value={ 'b' }
           />
           <Calendar name="when" label="When" className="date" />
           <Buttons values={[
