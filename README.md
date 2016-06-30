@@ -34,13 +34,16 @@ TODO
 ## Updates
 
 
-1.2.0 - Current
+1.2.1 - Current
+* Correct a bug on the component Select
+
+1.2.0
 * Add React 15 as devDep and compatibility with it
 * Add examples to test the components
 * Add className dispatch on components
 * Correct minor bugs
 
-1.1.0 - Current
+1.1.0
 * Add Yup as hard dep
 
 1.0.6

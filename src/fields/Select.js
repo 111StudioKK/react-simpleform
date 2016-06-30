@@ -14,8 +14,12 @@ export default class Select extends Field {
     //onChange = { (newValue, values) => this.props.onChange({category: values.map( (v) => { return v.value; }) })}
   }
 
-  _onChange(newValue, values) {
-    this.onChange(values.map( (v) => { return v.value; }));
+  _onChange(values) {
+    let newVal = values;
+    if ( this.props.multi === true ) {
+      newVal = values.map( (v) => { return v.value; });
+    }
+    this.onChange(newVal);
   }
 
   renderField(other) {
