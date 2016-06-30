@@ -36,11 +36,10 @@ class App extends React.Component {
             checkboxClass="checkbox"
             values={['top', 'jungle', 'mid', 'adc', 'support'].map( (i) => { return {label: i.toUpperCase(), value:i};})} />
           <Boolean name="noob" labelTrue="Yes very noob" labelFalse="Yes, a bit noob" />
-          <Calendar name="when" label="When" className="date" />
           <Select 
             className="rank"
             name="rank"
-            multi={ true }
+            multi={ false }
             options={ [
               { label: 'Bronze', value: 'b' },
               { label: 'Silver', value: 's' },
@@ -52,6 +51,7 @@ class App extends React.Component {
             ]}
             value={ 'b' }
           />
+          <Calendar name="when" label="When" className="date" />
           <Buttons values={[
             {value:'ok', class:'btn-approve', label:<div>OK</div>},
             {value:'ko', class:'btn-deny', label:<div>Nop</div>}

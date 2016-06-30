@@ -28,7 +28,7 @@
     font-weight: normal;
   }
 
-  select, input:not([type='checkbox']):not([type='radio']), textarea, .react-tagsinput {
+  &>input:not([type='checkbox']):not([type='radio']), textarea.form-textarea, .react-tagsinput {
     border: 1px solid #CCCCCC;
     font-size: unit(@input-font-size, px);
     padding: 6px 10px;
@@ -42,7 +42,7 @@
     -webkit-box-sizing: border-box;
   }
 
-  select:disabled, input:disabled, textarea:disabled {
+  select:disabled, input.form-input:disabled, textarea.form-textarea:disabled {
     background-color: @disabled-color;
     cursor: not-allowed;
   }
@@ -60,7 +60,7 @@
     height: 100px;
   }
 
-  input:focus, textarea:focus {
+  input.form-input:focus, textarea.form-textarea:focus {
     border: 1px solid #3598DC;
   }
 
@@ -152,23 +152,23 @@
 }
 
 .form-group.active{
-  input.form-input, textarea, .react-tagsinput{
+  input.form-input, textarea.form-textarea, .react-tagsinput{
     border: 1px solid #3598DC;
   }
 }
 
 .form-group.danger {
-  input, input.form-input, textarea, .react-tagsinput,  .Select-control{
+  input.form-input, textarea.form-textarea, .react-tagsinput,  .Select-control{
     border: 1px solid @danger;
     background-color: #ffe6e6;
   }
-  input:disabled {
+  input.form-input:disabled {
     border: 1px solid #CCCCCC;
   }
 }
 
 .form-group.success{
-  input.form-input, textarea, .react-tagsinput {
+  input.form-input, textarea.form-textarea, .react-tagsinput {
     border: 1px solid @success;
   }
 }
@@ -201,312 +201,6 @@
   outline: none;
   width: 80px !important;
   border: none !important;
-}
-
-/**
- * React Select
- * ============
- * Created by Jed Watson and Joss Mackison for KeystoneJS, http://www.keystonejs.com/
- * https://twitter.com/jedwatson https://twitter.com/jossmackison https://twitter.com/keystonejs
- * MIT License: https://github.com/keystonejs/react-select
-*/
-.Select {
-  position: relative;
-}
-.Select,
-.Select div,
-.Select input,
-.Select span {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.Select.is-disabled > .Select-control {
-  background-color: #f9f9f9;
-}
-.Select.is-disabled > .Select-control:hover {
-  box-shadow: none;
-}
-.Select.is-disabled .Select-arrow-zone {
-  cursor: default;
-  pointer-events: none;
-}
-.Select-control {
-  background-color: #fff;
-  border: 1px solid #CCCCCC;
-  color: #333;
-  cursor: default;
-  display: table;
-  outline: none;
-  overflow: hidden;
-  height: 30px;
-  position: relative;
-  width: 100%;
-}
-.Select-control:focus {
-  outline: none;
-}
-.is-open > .Select-control {
-  border-color: #3598DC;
-}
-
-.is-searchable.is-focused:not(.is-open) > .Select-control {
-  cursor: text;
-}
-
-.Select-placeholder,
-:not(.Select--multi) > .Select-control .Select-item {
-  bottom: 0;
-  color: #aaa;
-  left: 0;
-  line-height: 28px;
-  padding-left: 10px;
-  padding-right: 10px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.has-value:not(.Select--multi) > .Select-control > .Select-item .Select-item-label,
-.has-value.is-pseudo-focused:not(.Select--multi) > .Select-control > .Select-item .Select-item-label {
-  color: #333;
-}
-.has-value:not(.Select--multi) > .Select-control > .Select-item a.Select-item-label,
-.has-value.is-pseudo-focused:not(.Select--multi) > .Select-control > .Select-item a.Select-item-label {
-  cursor: pointer;
-  text-decoration: none;
-}
-.has-value:not(.Select--multi) > .Select-control > .Select-item a.Select-item-label:hover,
-.has-value.is-pseudo-focused:not(.Select--multi) > .Select-control > .Select-item a.Select-item-label:hover,
-.has-value:not(.Select--multi) > .Select-control > .Select-item a.Select-item-label:focus,
-.has-value.is-pseudo-focused:not(.Select--multi) > .Select-control > .Select-item a.Select-item-label:focus {
-  color: @primary;
-  outline: none;
-  text-decoration: underline;
-}
-
-.Select-input {
-  height: 0px;
-  padding: 6px 10px;
-  vertical-align: middle;
-}
-.Select-input > input {
-  background: none transparent;
-  border: 0 none;
-  box-shadow: none;
-  cursor: default;
-  display: inline-block;
-  font-family: inherit;
-  font-size: unit(@input-font-size, px);
-  height: 28px;
-  margin: 0;
-  outline: none;
-  padding: 0;
-  -webkit-appearance: none;
-}
-.is-focused .Select-input > input {
-  cursor: text;
-}
-.has-value.is-pseudo-focused .Select-input {
-  opacity: 0;
-}
-.Select-control:not(.is-searchable) > .Select-input {
-  outline: none;
-}
-.Select-loading-zone {
-  cursor: pointer;
-  display: table-cell;
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
-  width: 16px;
-}
-.Select-loading {
-  -webkit-animation: Select-animation-spin 400ms infinite linear;
-  -o-animation: Select-animation-spin 400ms infinite linear;
-  animation: Select-animation-spin 400ms infinite linear;
-  width: 16px;
-  height: 16px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-  border-right-color: #333;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-}
-.Select-clear-zone {
-  -webkit-animation: Select-animation-fadeIn 200ms;
-  -o-animation: Select-animation-fadeIn 200ms;
-  animation: Select-animation-fadeIn 200ms;
-  color: #999;
-  cursor: pointer;
-  display: table-cell;
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
-  width: 17px;
-}
-.Select-clear-zone:hover {
-  color: #D0021B;
-}
-.Select-clear {
-  display: inline-block;
-  font-size: 18px;
-  line-height: 1;
-}
-.Select--multi .Select-clear-zone {
-  width: 17px;
-}
-.Select-arrow-zone {
-  cursor: pointer;
-  display: table-cell;
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
-  width: 25px;
-  padding-right: 5px;
-}
-.Select-arrow {
-  border-color: @primary transparent transparent;
-  border-style: solid;
-  border-width: 5px 5px 2.5px;
-  display: inline-block;
-  height: 0;
-  width: 0;
-}
-.is-open .Select-arrow,
-.Select-arrow-zone:hover > .Select-arrow {
-  border-top-color: #666;
-}
-@-webkit-keyframes Select-animation-fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes Select-animation-fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.Select-menu-outer {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  margin-top: -1px;
-  max-height: 200px;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  z-index: 1;
-  -webkit-overflow-scrolling: touch;
-}
-.Select-menu {
-  max-height: 198px;
-  overflow-y: auto;
-}
-.Select-option {
-  box-sizing: border-box;
-  cursor: pointer;
-  display: block;
-  padding: 8px 10px;
-}
-.Select-option.is-focused {
-  background-color: lighten(@primary, 50%);
-}
-.Select-option.is-disabled {
-  color: #cccccc;
-  cursor: default;
-}
-.Select-noresults {
-  box-sizing: border-box;
-  color: #999999;
-  cursor: default;
-  display: block;
-  padding: 8px 10px;
-}
-.Select--multi .Select-input {
-  vertical-align: middle;
-  margin-left: 10px;
-  padding: 0;
-}
-.Select--multi.has-value .Select-input {
-  margin-left: 5px;
-}
-.Select--multi .Select-item {
-  background-color: @light-grey;
-  border: 1px solid #CCC;
-  color: @primary;
-  display: inline-block;
-  font-size: unit(@input-font-size - 1, px);
-  line-height: 18px;
-  margin-left: 3px;
-  margin-top: 2px;
-  vertical-align: top;
-}
-
-.Select--multi .Select-item-icon,
-.Select--multi .Select-item-label {
-  display: inline-block;
-  vertical-align: middle;
-}
-.Select--multi .Select-item-label {
-  cursor: default;
-  padding: 2px 5px;
-}
-.Select--multi a.Select-item-label {
-  color: @primary;
-  cursor: pointer;
-  text-decoration: none;
-}
-.Select--multi a.Select-item-label:hover {
-  text-decoration: underline;
-}
-.Select--multi .Select-item-icon {
-  cursor: pointer;
-  border-right: 1px solid #CCCCCC;
-  padding: 1px 5px 3px;
-}
-.Select--multi .Select-item-icon:hover,
-.Select--multi .Select-item-icon:focus {
-  background-color: @middlelight-grey;
-}
-.Select--multi .Select-item-icon:active {
-  background-color: @primary;
-  color: @white;
-}
-.Select--multi.is-disabled .Select-item {
-  background-color: #fcfcfc;
-  border: 1px solid #e3e3e3;
-  color: #333;
-}
-.Select--multi.is-disabled .Select-item-icon {
-  cursor: not-allowed;
-  border-right: 1px solid #e3e3e3;
-}
-.Select--multi.is-disabled .Select-item-icon:hover,
-.Select--multi.is-disabled .Select-item-icon:focus,
-.Select--multi.is-disabled .Select-item-icon:active {
-  background-color: #fcfcfc;
-}
-@keyframes Select-animation-spin {
-  to {
-    transform: rotate(1turn);
-  }
-}
-@-webkit-keyframes Select-animation-spin {
-  to {
-    -webkit-transform: rotate(1turn);
-  }
 }
 
 //Calendar / Picker

@@ -1,6 +1,7 @@
 import React from 'react';
 import Field from '../main/Field.js';
 import _Select from 'react-select';
+import '../style/Select.less';
 
 export default class Select extends Field {
 
