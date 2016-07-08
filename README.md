@@ -34,7 +34,10 @@ TODO
 ## Updates
 
 
-1.2.3 - Current
+1.2.4 - Current
+* Problems with react conf in package.json
+
+1.2.3
 * Correct CSS on component Select
 * Correct different bugs on Select
 
