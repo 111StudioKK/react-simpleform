@@ -117,7 +117,7 @@ export default class Form extends React.Component {
   }
   
   render() {
-    let {onSubmit, ...other} = this.props;
+    let {onSubmit, onChange, schema, ...other} = this.props;
     let debug = (__DEV__) ?
       this._displayDebug()
       : null;
