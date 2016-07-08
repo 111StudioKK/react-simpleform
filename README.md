@@ -33,8 +33,11 @@ TODO
 
 ## Updates
 
+1.2.5 - Current
+* Fixe one and for all the packages bugs and compatibility.
+* Upgrade several components
 
-1.2.4 - Current
+1.2.4
 * Problems with react conf in package.json
 
 1.2.3
