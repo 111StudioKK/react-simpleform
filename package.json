@@ -5,7 +5,7 @@
   "main": "dist/react-simpleform.min.js",
   "scripts": {
     "build": "webpack -p --mode=build",
-    "publish": "npm run build && npm publish",
+    "build:publish": "npm run build && npm publish",
     "dev": "webpack --progress --colors --watch --mode=dev",
     "example": "webpack-dev-server --content-base example/build/ --config webpack-example.config.js",
     "test": "echo 'ERROR : no tests yet'"
