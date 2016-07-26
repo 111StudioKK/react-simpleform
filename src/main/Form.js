@@ -49,7 +49,7 @@ export default class Form extends React.Component {
   onSubmit(evt) {
     evt.preventDefault();
     if(this.state.validated){
-      this.props.onSubmit(this.state.data);
+      this.props.onSubmit(this.state.data, evt);
     }
     else{
       this.setState({
@@ -115,7 +115,7 @@ export default class Form extends React.Component {
   getChildContext() {
     return {onChange: this.validateSchema.bind(this), submitFailures: this.state.submitFailures};
   }
-  
+
   render() {
     let {onSubmit, onChange, schema, ...other} = this.props;
     let debug = (__DEV__) ?
