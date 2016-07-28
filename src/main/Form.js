@@ -48,6 +48,7 @@ export default class Form extends React.Component {
 
   onSubmit(evt) {
     evt.preventDefault();
+    evt.persist();
     if(this.state.validated){
       this.props.onSubmit(this.state.data, evt);
     }
