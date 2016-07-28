@@ -1,5 +1,5 @@
 # React Simple Form
-
+[![npm version](https://badge.fury.io/js/111-react-simpleform.svg)](https://badge.fury.io/js/111-react-simpleform)
 
 ## Install
 
@@ -10,7 +10,7 @@ npm i -S 111-react-simpleform
 
 ## How to use
 
-```javascript 
+```javascript
 import Form, {Input, Textarea} from '111-react-simpleform';
 ````
 
@@ -33,7 +33,17 @@ TODO
 
 ## Updates
 
-1.2.5 - Current
+1.3.2 - Current
+* Removes React synthetic form event to allow property access
+* Change react dependency from static to >.14, >15
+
+1.3.1
+* Fixes wrong publish, adds a build:publish script.
+
+1.3.0
+* Pass form's dom event to the onSubmit handler
+
+1.2.5
 * Fixe one and for all the packages bugs and compatibility.
 * Upgrade several components
 
@@ -67,7 +77,7 @@ TODO
 * Purge fake tests
 * Tweek webpack and change directory from lib to dist and remove maping
 * Also remove the compiled version from the repository
- 
+
 1.0.3
 * Correct bug with Calendar where React was called twice
 
