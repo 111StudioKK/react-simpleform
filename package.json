@@ -49,8 +49,8 @@
   },
   "homepage": "https://github.com/111StudioKK/react-simpleform",
   "peerDependencies": {
-    "react": "15.1.x",
-    "react-dom": "15.1.x"
+    "react": "^0.14 || ^15.0",
+    "react-dom": "^0.14 || ^15.0"
   },
   "dependencies": {
     "react-input-autosize": "git+https://github.com/JedWatson/react-input-autosize.git",
