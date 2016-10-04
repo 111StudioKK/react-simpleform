@@ -53,10 +53,10 @@
     "react-dom": "^0.14 || ^15.0"
   },
   "dependencies": {
-    "react-input-autosize": "git+https://github.com/JedWatson/react-input-autosize.git",
     "moment": "2.12.0",
     "react-click-outside": "2.1.0",
-    "react-day-picker": "2.3.3",
+    "react-day-picker": "2.4.1",
+    "react-input-autosize": "git+https://github.com/JedWatson/react-input-autosize.git",
     "react-json-tree": "0.6.5",
     "react-select": "1.0.0-beta13",
     "react-tagsinput": "3.9.1",

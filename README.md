@@ -33,7 +33,10 @@ TODO
 
 ## Updates
 
-1.3.2 - Current
+1.3.3 - Current
+* Update react-day-picker to correct a bug
+
+1.3.2
 * Removes React synthetic form event to allow property access
 * Change react dependency from static to >.14, >15
 
