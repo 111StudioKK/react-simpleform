@@ -33,7 +33,10 @@ TODO
 
 ## Updates
 
-1.3.4 - Current
+1.3.5 - Current
+* Fix bug of locals by putting moment as externals
+
+1.3.4
 * Remove bug where localeData not available
 
 1.3.3
