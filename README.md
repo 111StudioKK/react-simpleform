@@ -33,7 +33,10 @@ TODO
 
 ## Updates
 
-1.3.3 - Current
+1.3.4 - Current
+* Remove bug where localeData not available
+
+1.3.3
 * Update react-day-picker to correct a bug
 
 1.3.2
