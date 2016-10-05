@@ -1,6 +1,12 @@
 var path = require('path');
 var webpack = require('webpack');
 
+var momentExternals = {
+  root: 'moment',
+  commonjs2: 'moment',
+  commonjs: 'moment',
+  amd: 'moment'
+};
 var reactExternals = {
   root: 'React',
   commonjs2: 'react',
@@ -31,6 +37,7 @@ var config = {
   },
   externals: [
     {
+      'moment': momentExternals,
       'react': reactExternals,
       './React': reactExternals,
       'react-dom': reactDOMExternals

@@ -7,10 +7,6 @@ import enhanceWithClickOutside from 'react-click-outside';
 import '../style/Calendar.less';
 
 
-MomentLocaleUtils.getFirstDayOfWeek = (locale = 'en') => {
-  const localeData = moment.localeData(locale) ? moment.localeData(locale) : moment.localeData('en');
-  return localeData.firstDayOfWeek();
-};
 
 class _Calendar extends Field {
 
