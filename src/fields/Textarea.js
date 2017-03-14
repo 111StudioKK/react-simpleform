@@ -8,9 +8,12 @@ export default class Textarea extends Field {
         {...other}
         className='form-textarea'
         value={this.state.value}
-        onFocus={this.onFocus.bind(this)}
         onBlur={this.onBlur.bind(this)}
         onChange={this.onChange.bind(this)}
+        onCompositionEnd={this.handleComposition}
+        onCompositionStart={this.handleComposition}
+        onCompositionUpdate={this.handleComposition}
+        onFocus={this.onFocus.bind(this)}
       />);
   }
 }

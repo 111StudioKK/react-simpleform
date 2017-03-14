@@ -18,10 +18,14 @@ export default class Input extends Field {
         {...other}
         value={this.state.value}
         className='form-input'
-        onFocus={this.onFocus.bind(this)}
         onBlur={this.onBlur.bind(this)}
         onChange={this.onChange.bind(this)}
-      />);
+        onCompositionEnd={this.handleComposition}
+        onCompositionStart={this.handleComposition}
+        onCompositionUpdate={this.handleComposition}
+        onFocus={this.onFocus.bind(this)}
+      />
+    );
   }
 }
 

@@ -1,5 +1,7 @@
 import React from 'react';
 
+let onComposition = false;
+
 export default class Field extends React.Component {
 
   constructor(props) {
@@ -32,17 +34,25 @@ export default class Field extends React.Component {
     }
   }
 
+  handleComposition  = (event) => {
+    if (event.type === 'compositionend') {
+      onComposition = false;
+      this.onChange(event);
+    } else {
+      onComposition = true;
+    }
+  }
+
   onChange(evt, reseting = false) {
     let value = (evt && evt.target)? evt.target.value : evt;
-    this.setState({
-      value: value
-    });
-    this.context.onChange(this.props.name, value, reseting).then(err => {
-
-      this.setState({
-        error: err
+    this.setState({value: value});
+    if ( !onComposition ) {
+      this.context.onChange(this.props.name, value, reseting).then(err => {
+        this.setState({
+          error: err
+        });
       });
-    });
+    }
   }
 
   onFocus() {
